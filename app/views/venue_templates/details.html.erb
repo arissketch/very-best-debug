@@ -1,5 +1,5 @@
 <h1>Venue Details</h1>
-<%=@the_venue%>
+
 <dl>
   <dt>Address</dt>
   <dd>
@@ -57,7 +57,8 @@
   <% @the_venue.comments.each do |comment| %>
   <tr>
     <td>
-      <%= comment.id%>
+      <%the_user=comment.commenter%>
+      <%=the_user.username%>
     </td>
 
     <td>
